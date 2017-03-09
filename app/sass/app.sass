@@ -1,0 +1,37 @@
+@import 'bourbon/bourbon'
+@import 'neat/neat'
+@import 'animations'
+
+$desktop-min: 1240px
+$lg-tablet-min: 1040px
+$tablet-min: 640px
+
+$lg-tablet-max: $desktop-min - 1px
+$tablet-max: $lg-tablet-min - 1px
+$mobile-max: $tablet-min - 1px
+
+$desktop: new-breakpoint(min-width em($desktop-min) 12)
+$lg-tablet: new-breakpoint(min-width em($lg-tablet-min) max-width em($lg-tablet-max) 12)
+$tablet: new-breakpoint(min-width em($tablet-min) max-width em($tablet-max) 12)
+$mobile: new-breakpoint(max-width em($mobile-max) 12)
+
+$lg-tablet-plus: new-breakpoint(min-width em($lg-tablet-min) 12)
+$tablet-plus: new-breakpoint(min-width em($tablet-min) 12)
+$lg-tablet-minus: new-breakpoint(max-width em($lg-tablet-max) 12)
+$tablet-minus: new-breakpoint(max-width em($tablet-max) 12)
+
+@mixin outer-container-default
+    @include media($desktop)
+        @include outer-container(em($desktop-min - 40px))
+    @include media($lg-tablet)
+        @include outer-container(em($lg-tablet-min - 40px))
+    @include media($tablet)
+        @include outer-container(em($tablet-min - 40px))
+    @include media($mobile)
+        @include outer-container(95%)
+
+@import 'default'
+@import 'sidebar'
+@import 'index'
+@import 'education'
+@import 'experience'

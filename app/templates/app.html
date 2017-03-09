@@ -1,0 +1,24 @@
+<nav role="navigation">
+    <ul>
+        <li [class.active]="router.isRouteActive(router.generate(['/Index']))">
+            <a [routerLink]="['Index']">Introduction</a>
+        </li>
+        <li [class.active]="router.isRouteActive(router.generate(['/Experience']))">
+            <a [routerLink]="['Experience']">Experience</a>
+        </li>
+        <li [class.active]="router.isRouteActive(router.generate(['/Education']))">
+            <a [routerLink]="['Education']">Education</a>
+        </li>
+    </ul>
+</nav>
+<main>
+    <section class="sidebar">
+        <app-sidebar></app-sidebar>
+    </section>
+    <section class="content">
+        <div class="wrapper">
+            <router-outlet></router-outlet>
+        </div>
+        <app-footer></app-footer>
+    </section>
+</main>

@@ -1,0 +1,54 @@
+.zoom-out
+  @include animation(zoom-out 0.3s ease-in)
+  left: 0
+  position: absolute
+  top: 0
+  visibility: hidden
+  z-index: -1
+
+@include keyframes(zoom-out)
+  0%
+    @include transform(scale(1))
+    opacity: 1
+    position: initial
+    visibility: initial
+    z-index: initial
+  99.9999%
+    @include transform(scale(0.9))
+    opacity: 0.7
+    position: initial
+    visibility: initial
+    z-index: initial
+  100%
+    @include transform(scale(0))
+    @include position(absolute, 0 0 null null)
+    visibility: hidden
+    z-index: -1
+
+.slide-in-right
+  @include animation(slide-in-right 0.3s ease-out)
+  position: initial
+  visibility: initial
+  z-index: 0
+
+@include keyframes(slide-in-right)
+  0%
+    @include transform(translate(20px))
+    opacity: 0.7
+  100%
+    @include transform(translate(0))
+    opacity: 1
+
+.zoom-in
+  @include animation(zoom-in 0.4s ease-out)
+  position: initial
+  visibility: initial
+  z-index: 0
+
+@include keyframes(zoom-in)
+  0%
+    @include transform(scale(0.9))
+    opacity: 0.7
+  100%
+    @include transform(scale(1))
+    opacity: 1

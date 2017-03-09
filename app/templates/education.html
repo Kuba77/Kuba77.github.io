@@ -1,0 +1,58 @@
+<section class="education">
+    <div class="certificate-showcase zoom-in">
+        <h2>Certificates</h2>
+        <ul class="certificates">
+            <li *ngFor="#certificate of certificates"
+                class="slide-in-right">
+                <div class="certificate-name">{{certificate.name}}</div>
+                <div class="certificate-institution">{{certificate.institution}}</div>
+            </li>
+        </ul>
+    </div>
+    <div *ngFor="#school of schools"
+         [style.background-color]="school.background_color"
+         [style.color]="school.foreground_color"
+         class="school-showcase zoom-in">
+        <p *ngIf="school.logo">
+            <img alt="{{school.name}} logo"
+                 class="school-logo"
+                 src="/assets/img/schools/{{school.codename}}-logo.jpg">
+        </p>
+        <h2>{{school.name}}</h2>
+        <div *ngIf="school.exams"
+             class="school-grades-column">
+            <h4>End of the school exam</h4>
+            <table class="school-grades">
+                <tbody>
+                    <tr *ngFor="#exam of school.exams">
+                        <td>{{exam.name}}</td>
+                        <td>{{exam.score}}%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="school-grades-column">
+            <h4>Regular Subjects</h4>
+            <table class="school-grades">
+                <tbody>
+                    <tr *ngFor="#subject of school.subjects">
+                        <td>{{subject.name}}</td>
+                        <td>{{american_grades[subject.grade]}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div *ngIf="school.technical_subjects"
+             class="school-grades-column">
+            <h4>Technical Subjects</h4>
+            <table class="school-grades">
+                <tbody>
+                    <tr *ngFor="#subject of school.technical_subjects">
+                        <td>{{subject.name}}</td>
+                        <td>{{american_grades[subject.grade]}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <base href="/"></base>
+    <title>Chronow.ski</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/app.min.css" type="text/css">
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+    <link type="text/plain" rel="author" href="/humans.txt" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- Polyfills, in this exact order -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.0/es6-shim.js"></script>
+    <script src="https://code.angularjs.org/tools/system-polyfills.js"></script>
+    <script src="https://unpkg.com/angular2@2.0.0-beta.9/es6/dev/src/testing/shims_for_IE.js"></script>
+
+    <script src="https://code.angularjs.org/tools/system.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.9/angular2-polyfills.min.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.9/Rx.min.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.9/angular2.min.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.9/router.dev.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.9/http.min.js"></script>
+
+    <script>
+      System.config({
+        packages: {
+          app: {
+            format: 'register',
+            defaultExtension: 'js'
+          }
+        }
+      });
+      System.import('app/main')
+            .then(null, console.error.bind(console));
+    </script>
+  </head>
+  <body>
+    <app><i class="fa fa-fw fa-spin fa-circle-o-notch" style="position: absolute; top: 30%; left: 50%; margin-left: -0.642857145em"></i></app>
+  </body>
+</html>

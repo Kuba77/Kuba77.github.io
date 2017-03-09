@@ -1,0 +1,113 @@
+html, body
+    margin: 0
+    padding: 0
+
+body
+    background-color: #FFF
+    color: #000
+    font-family: $helvetica
+    line-height: 1.2em
+    overflow-y: scroll
+
+a
+    color: #F7484E
+    font-weight: bold
+    text-decoration: none
+
+a.normal
+    color: inherit
+    font-weight: none
+
+p
+    color: #333
+    margin-top: 0
+
+h1, h2, h3, h4, h5, h6
+    font-family: 'Montserrat'
+    font-weight: 400
+    margin: 0 0 0.5em
+    padding: 0.2em 0
+
+select
+    border-radius: 0.25em
+
+table
+    color: inherit
+    margin-bottom: 1em
+    thead
+        th
+            font-weight: bold
+            padding: 0 0.5em 0.5em 0
+            text-align: left
+    tbody
+        td
+            padding: 0 1em 0.5em 0
+
+.label
+    border-radius: 0.25em
+    color: inherit
+    font-size: 0.75em
+    font-weight: normal
+    line-height: 2.5em
+    margin: 0 0.25em
+    padding: 0.25em
+
+    &.lighten
+        background-color: rgba(255, 255, 255, 0.05)
+    &.darken
+        background-color: rgba(0, 0, 0, 0.05)
+
+.showcase
+    border-radius: 0.25em
+    margin: 0 0 1em 0
+    padding: 1em
+    p
+        color: inherit
+
+main
+    @include outer-container-default
+
+section.content
+    @include media($lg-tablet-plus)
+        @include span-columns(10)
+
+        div.wrapper
+            box-sizing: border-box
+            min-height: 100%
+            min-height: 100vh
+            padding-top: 4.5em
+
+    div.wrapper
+        padding-bottom: 2.8em
+
+nav
+    background-color: #F7484E
+    color: #FFF
+    height: 3em
+    left: 0
+    overflow: hidden
+    position: fixed
+    right: 0
+    top: 0
+    z-index: 1000
+    ul
+        @include outer-container-default
+
+        margin: 0
+        padding: 0
+        border-radius: 0.25em
+        list-style-type: none
+        li
+            padding: 1em
+            display: inline-block
+            &.active
+                font-weight: 500
+            a
+                color: inherit
+                font-weight: inherit
+
+footer
+    font-size: 0.8em
+    height: 0.8em
+    margin-top: -1.8em
+    text-align: center

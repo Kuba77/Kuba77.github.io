@@ -1,0 +1,31 @@
+<section class="experience">
+    <div *ngFor="#project of projects"
+         [style.background-color]="project.background_color"
+         [style.color]="project.foreground_color"
+         class="project-showcase zoom-in">
+        <p>
+            <img alt="{{project.name}} logo"
+                 class="project-logo"
+                 src="/assets/img/projects/{{project.codename}}-logo.jpg">
+        </p>
+        <div [innerHTML]=project.description></div>
+        <div>
+            <span class="normal">
+               <i class="fa fa-code"></i>
+            </span>
+            <span *ngFor="#language of project.languages"
+               class="label {{project.label_class}}">
+                {{language}}
+            </span>
+        </div>
+        <div>
+            <span class="normal">
+               <i class="fa fa-cogs"></i>
+            </span>
+            <span *ngFor="#technology of project.stack"
+               class="label {{project.label_class}}">
+                {{technology}}
+            </span>
+        </div>
+    </div>
+</section>

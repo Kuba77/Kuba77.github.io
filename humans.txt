@@ -1,0 +1,13 @@
+/* TEAM */
+    Chef: Jakub Chronowski
+    Contact: jakub@chronow.ski
+    Twitter: @jakubchronowski
+    From: Warsaw, Masovia, Poland
+    From: Oborniki, Greater Poland, Poland
+
+/* SITE */
+    Last update: 2016/03/03
+    Language: English
+    Doctype: HTML5
+    Technologies and frameworks: TypeScript, Angular 2, Sass, Bourbon, Neat
+    Tools: Gulp, Sublime Text

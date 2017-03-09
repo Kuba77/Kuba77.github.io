@@ -1,0 +1,49 @@
+section.sidebar
+    @include media($lg-tablet-plus)
+        @include span-columns(2)
+        img
+            @include fill-parent
+        
+        section.information
+            ul.sidebar-list
+                li
+                    overflow-wrap: break-word
+                    word-wrap: break-word
+                    word-break: break-all
+
+    @include media($tablet)
+        @include outer-container-default
+        img
+            @include span-columns(3)
+        section.information
+            @include span-columns(9)
+            ul.sidebar-list
+                float: left
+                padding-right: 1em
+
+    @include media($mobile)
+        @include outer-container-default
+        img
+            display: none
+        section.information
+            ul.sidebar-list
+                float: left
+                padding-right: 1em
+
+    padding-top: 4.5em
+
+    img
+        border-radius: 0.25em
+
+    ul.sidebar-list
+        color: #333
+        list-style-type: none
+        margin: 0 0 1em
+        padding: 0
+        li
+            margin: 0
+            padding: 0.2em 0
+            color: #333
+            a
+                color: inherit
+                font-weight: inherit

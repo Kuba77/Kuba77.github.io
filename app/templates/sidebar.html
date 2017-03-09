@@ -1,0 +1,17 @@
+<img alt="Profile picture" src="/assets/img/profile.jpg">
+<h3>Jakub Chronowski</h3>
+<section class="information">
+    <ul class="sidebar-list">
+        <li><i class="fa fa-fw fa-map-marker"></i> Warsaw, Poland</li>
+        <li><i class="fa fa-fw fa-phone"></i> +48 737 302 751</li>
+        <li>
+            <a href="mailto:jakub@chronow.ski"><i class="fa fa-fw fa-envelope-o"></i> jakub@chronow.ski</a>
+        </li>
+        <li><i class="fa fa-fw fa-language"></i> English, Polish</li>
+    </ul>
+    <ul class="sidebar-list">
+        <li *ngFor="#sociallink of sociallinks">
+            <a href="{{sociallink.url}}" target="_blank"><i class="fa fa-fw fa-{{sociallink.icon}}"></i> {{sociallink.name}}</a>
+        </li>
+    </ul>
+</section>
